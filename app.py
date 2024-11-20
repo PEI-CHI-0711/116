@@ -11,9 +11,9 @@ def home():
 def about():
     return render_template("about.html")
 
-@app.route("/Previous_sessions")
-def Previous_sessions():
-    return render_template("Previous_sessions.html")
+@app.route("/Graduate")  
+def Graduate():  
+    return render_template("Graduate.html")  
 
 @app.route("/Daily_life")
 def Daily_life():
