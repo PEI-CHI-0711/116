@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>榮譽 - 固態照明實驗室 (116)</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #2c3e50;
+        }
+
+        h1 {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #2c3e50;
+        }
+
+        nav {
+            background-color: #ecf0f1;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* 榮譽區域樣式 */
+        .honor-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 90%;
+        }
+
+        .honor-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: white;
+            width: 320px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .honor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .honor-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .honor-card h3 {
+            margin: 10px 0;
+            color: #3498db;
+        }
+
+        .honor-card p {
+            margin: 5px 0;
+            color: #7f8c8d;
+        }
+
+        .honor-card a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .honor-card a:hover {
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>固態照明實驗室 (116) 榮譽</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/about">About</a> |
+        <a href="/Previous_sessions">Previous Sessions</a> |
+        <a href="/Daily_life">Daily Life</a> |
+        <a href="/Honor">Honor</a>
+    </nav>
+
+    <section>
+        <h2>近期榮譽</h2>
+        <div class="honor-container">
+            <!-- 榮譽 1 -->
+            <div class="honor-card">
+                <img src="{{ url_for('static', filename='images/全國專題競賽2021.jpg') }}" alt="2021 獲獎">
+                <h3>2021 全國專題競賽</h3>
+                <p>第一名</p>
+                <a href="https://n.yam.com/Article/20210616189382" target="_blank">查看新聞詳情</a>
+            </div>
+
+            <!-- 榮譽 2 -->
+            <div class="honor-card">
+                <img src="{{ url_for('static', filename='images/全國專題競賽2023.jpg') }}" alt="2023 獲獎">
+                <h3>2023 全國專題競賽</h3>
+                <p>佳作</p>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
