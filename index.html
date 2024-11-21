@@ -97,25 +97,33 @@
                 line-height: 1.6;
             }
     
-            /* 圖片展示區域樣式 */
-            .gallery {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-                margin: 20px auto;
-                max-width: 80%;
-            }
-    
-            .gallery img {
-                width: 200px;
-                height: 200px;
-                object-fit: cover;
-                border: 2px solid #ddd;
-                border-radius: 10px;
-            }
+        /* 圖片展示區域樣式 */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap; /* 允許多行排列 */
+            justify-content: center;
+            gap: 10px; /* 圖片間的間距 */
+            margin: 20px auto;
+            max-width: 80%;
+        }
+        
+        /* 圖片樣式 */
+        .gallery img {
+            width: 200px; /* 固定寬度 */
+            height: 200px; /* 固定高度 */
+            object-fit: cover; /* 保持圖片比例，裁剪多餘部分 */
+            border: 2px solid #ddd; /* 圖片邊框 */
+            border-radius: 10px; /* 圓角 */
+        }
+        
+        /* 限制每排最多顯示五張圖片 */
+        .gallery > * {
+            flex: 1 1 calc(20% - 10px); /* 每張圖片占20%的寬度，考慮間隙 */
+            max-width: calc(20% - 10px); /* 最大寬度設為20%減去間距 */
+            box-sizing: border-box; /* 包括邊框與內邊距 */
+        }
         </style>
-    </head>
+</head>
     <body>
         <h1>Welcome 固態照明實驗室 (116)</h1>
         <nav>  
@@ -140,8 +148,8 @@
         
         <div class="carousel" id="carousel2">
             <img src="static/images/photo (15).JPG" >        
-            <img src="static/images/photo (16).jpg" >        
-            <img src="static/images/photo (17).jpg" >  
+            <img src="static/images/photo (16).jpg" >          
+            <img src="static/images/photo (17).jpg" >    
             <img src="static/images/photo (14).jpg" >    
         </div>
        
@@ -164,14 +172,14 @@
         <div class="gallery">
             <img src="https://via.placeholder.com/200?text=Image+1" alt="Image 1">  
             <img src="https://via.placeholder.com/200?text=Image+2" alt="Image 2">  
-            <img src="https://via.placeholder.com/200?text=Image+3" alt="Image 3">
+            <img src="https://via.placeholder.com/200?text=Image+3" alt="Image 3">  
             <img src="https://via.placeholder.com/200?text=Image+4" alt="Image 4">  
     </div>
         -->
         
         
         <!-- 圖片展示 -本地圖片 -->
-        <div class="gallery">
+        <div class="gallery">    
             <img src="static/images/photo (6).jpg" alt="Photo 1">      
             <img src="static/images/photo (8).jpg" alt="Photo 2">    
             <img src="static/images/photo (4).jpg" alt="Photo 3">    
