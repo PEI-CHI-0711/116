@@ -189,7 +189,7 @@
      
     
         <!-- JavaScript for Carousel -->
-        <script>
+        <script>  
             const carousel = document.getElementById("carousel2");
             let scrollAmount = 0;  
     
@@ -206,5 +206,38 @@
     
             setInterval(scrollCarousel, 3000); // 每3秒滾動一次
         </script>
+
+
+        /* 快捷按鈕區域樣式 */
+.shortcut-buttons {
+    position: fixed; /* 固定位置 */
+    bottom: 10px; /* 距離底部 10px */
+    left: 50%; /* 水平位置居中 */
+    transform: translateX(-50%); /* 確保元素真正居中 */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* 按鈕樣式 */
+.shortcut-buttons a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shortcut-buttons a:hover {  
+    background-color: #2980b9;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
     </body>
     </html>
