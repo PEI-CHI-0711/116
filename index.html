@@ -38,12 +38,46 @@
                 text-decoration: none;
                 color: #2c3e50;
                 font-weight: bold;
-            }
+            }  
     
             nav a:hover {
                 color: #3498db;
             }
+
+            /* 左側按鈕樣式 */
+            .left-buttons {
+                position: fixed;
+                top: 50%; /* 垂直居中 */
+                left: 10px; /* 距離左側邊界10px */
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column; /* 垂直排列 */
+                gap: 20px; /* 按鈕之間的距離 */
+            }
     
+            .left-buttons a {  
+                display: inline-block;  
+                padding: 10px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
+                text-decoration: none;
+                background-color: #3498db;
+                border-radius: 5px;
+                text-align: center;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .left-buttons a:hover {
+                background-color: #2980b9;
+                transform: scale(1.1);
+            }
+    
+
+
+
+        
     
             /* 跑馬燈區域樣式 */
              .carousel {
@@ -127,17 +161,23 @@
     </style>
 
 </head>
-    <body>
+    <body>  
         <h1>Welcome 固態照明實驗室 (116)</h1>
-        <nav>  
+        <nav>    
             <a href="index.html">Home</a> |  
             <a href="about.html">About</a> |
-            <a href="Graduate.html">Graduate</a> |  
+            <a href="Graduate.html">Graduate</a> |    
             <a href="Daily_life.html">Daily Life</a> |
             <a href="Honor.html">Honor</a>
            </nav>
-    
-    
+
+        <!-- 左側按鈕 -->
+        <div class="left-buttons">
+            <a href="photos.html">相片留存</a>  
+            <a href="videos.html">影片</a>
+        </div>  
+
+        
         <!-- 照片跑馬燈 1 - 在線圖片 -->
         <!--
         <div class="carousel" id="carousel1">
