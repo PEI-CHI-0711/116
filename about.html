@@ -57,40 +57,52 @@
         }
 
         /* 信息卡片樣式 */
-        .info-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            width: 220px; /* 固定寬度 */
-            text-align: center;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.info-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 240px; /* 卡片寬度 */
+    text-align: center; /* 整體文字置中 */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* 使用Flexbox讓卡片內內容對齊 */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平置中 */
+    justify-content: space-between; /* 均勻分配上下空間 */
+}
 
-        .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
+.info-card img {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
 
-        .info-card img {
-            width: 100%;
-            height: 200px; /* 固定高度 */
-            object-fit: cover;
-            border-radius: 5px;
-        }
+.info-card h3 {
+    margin: 15px 0 5px;
+    color: #3498db;
+    font-weight: bold; /* 加粗字體 */
+    text-align: center;
+}
 
-        .info-card h3 {
-            margin: 15px 0 5px;
-            color: #3498db;
-            font-size: 18px;
-        }
+.info-card p {
+    margin: 5px 0;
+    color: #7f8c8d;
+    text-align: left; /* 每一行文字左對齊 */
+    width: 100%; /* 確保文字區塊在卡片內對齊 */
+}
 
-        .info-card p {
-            margin: 5px 0;
-            color: #7f8c8d;
-            font-size: 14px;
-        }
+.info-card a {
+    text-decoration: none;
+    color: purple;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.info-card a:hover {
+    color: #2980b9; /* 滑鼠懸停顏色 */
+}
     </style>
 </head>
 <body>
@@ -99,7 +111,7 @@
         <a href="index.html">Home</a> |    
         <a href="about.html">About</a> |
         <a href="Graduate.html">Graduate</a> |  
-        <a href="Daily_life.html">Daily Life</a> |
+        <a href="Daily_life.html">Daily Life</a> |  
         <a href="Honor.html">Honor</a>
        </nav>
 
@@ -111,8 +123,7 @@
         <div class="info-card">
             <img src="static/images/professor_SB.JPG" alt="Professor SB">        
             <h3>殷尚彬教授</h3>  
-            <p>Email: sbying@must.edu.tw</p>  
-            <p>Phone: +886-3-5593142 # 3384</p>
+            <p>Email: sbying@must.edu.tw</p> <p>Phone: +886-3-5593142 # 3384</p>  
             <a href="https://acade.must.edu.tw/member/page.aspx?UnitID=40&id=5592" target="_blank">查看教師資料</a>    
         </div>  
         <div class="info-card">
@@ -182,7 +193,7 @@
                <p>大學二年級</p>
            </div>
             <div class="info-card">  
-                <img src="static/images/Wei.jpg">      
+                <img src="static/images/Wei.jpg">        
                 <h3>梁祐維</h3>
                 <p>大學二年級</p>
             </div>
