@@ -123,12 +123,33 @@
             box-sizing: border-box; /* 包括邊框與內邊距 */
         }
 
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - 固態照明實驗室 (116)</title>
+    <style>
+        /* 全局樣式 */
+        body {
+            font-family: 標楷體, Times New Roman, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            font-size: 28px;
+        }
+
         /* 快捷按鈕區域樣式 */
-        .shortcut-buttons {  
-            position: fixed; /* 固定位置 */
-            bottom: 10px; /* 距離底部 10px */
-            left: 50%; /* 水平位置居中 */
-            transform: translateX(-50%); /* 確保元素真正居中 */
+        .shortcut-buttons {
+            margin: 50px auto;
             display: flex;
             justify-content: center;
             gap: 30px;
@@ -147,12 +168,31 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
-        .shortcut-buttons a:hover {  
+
+        .shortcut-buttons a:hover {
             background-color: #2980b9;
             transform: scale(1.1);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
+
+        /* 選擇按鈕容器對齊 */
+        .buttons-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>固態照明實驗室</h1>
+    <div class="shortcut-buttons">
+        <!-- 相片留存按鈕 -->
+        <a href="photos.html" target="_blank">相片留存</a>
+
+        <!-- 影片按鈕 -->
+        <a href="videos.html" target="_blank">影片</a>
+    </div>
+</body>
+</html>
 
         </style>
 </head>
