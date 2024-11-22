@@ -47,15 +47,14 @@
         .carousel {  
             display: flex;  
             overflow-x: auto; /* 允許水平滾動 */
-            scroll-snap-type: x mandatory; /* 滾動對齊 */      
+            scroll-snap-type: x mandatory; /* 滾動對齊 */        
             margin: 20px auto;
             width: 55%; /* 寬度 */
-            aspect-ratio: 16 / 9; /* 添加 16:9 的比例 */    
+            aspect-ratio: 16 / 9; /* 添加 16:9 的比例 */      
             border: 2px solid #ddd;  
             border-radius: 10px;
             background-color: #f9f9f9;  
             scrollbar-width: none; /* 隱藏滾動條（適用於 Firefox） */
-            position: relative; /* 定位 */
         }
 
         .carousel::-webkit-scrollbar {
@@ -76,7 +75,7 @@
     
         /* 實驗室資訊區域樣式 */
         .info {
-            font-family: 標楷體, Times New Roman, serif;          
+            font-family: 標楷體, Times New Roman, serif;            
             margin: 20px;
             padding: 20px;
             border: 1px solid #ddd;
@@ -169,14 +168,9 @@
             font-weight: bold;
             color: #3498db;
             margin-left: 10px;
-        }
-        
+        }      
 
-
-        
-
-    </style>
-
+    </style>  
 </head>
     <body>
         <h1>Welcome 固態照明實驗室 (116)</h1>
@@ -187,22 +181,15 @@
             <a href="Daily_life.html">Daily Life</a> |
             <a href="Honor.html">Honor</a>
            </nav>
-    
-    
-        <!-- 照片跑馬燈 1 - 在線圖片 -->
-        <!--
-        <div class="carousel" id="carousel1">    
-            <img src="https://via.placeholder.com/800x300?text=Photo+1" alt="Photo 1">      
-    </div>
-         -->
+
     
         <!-- 照片跑馬燈 2 - 本地圖片 -->
         
         <div class="carousel" id="carousel1">    
             <img src="static/images/photo (15).JPG" >              
             <img src="static/images/photo (16).jpg" >            
-            <img src="static/images/photo (17).jpg" >    
-            <img src="static/images/photo (14).jpg" >    
+            <img src="static/images/photo (17).jpg" >      
+            <img src="static/images/photo (14).jpg" >      
         </div>
        
     
@@ -218,21 +205,14 @@
             <p>歡迎有興趣的學生與研究人員加入我們！</p>
             <p>電話：+886-3-5593142＃1359、3384</p> 地址：304新竹縣新豐鄉新興路1號（明新科大逢喜樓-116室）</p>
         </div>
-    
-        <!-- 圖片展示 -在線圖片 -->
-        <!--
-        <div class="gallery">
-            <img src="https://via.placeholder.com/200?text=Image+1" alt="Image 1">  
-    </div>
-        -->
-        
+
         
         <!-- 圖片展示 -本地圖片 -->
         <div class="gallery">    
             <img src="static/images/photo (6).jpg" alt="Photo 1">  
             <img src="static/images/photo (8).jpg" alt="Photo 2">
             <img src="static/images/photo (4).jpg" alt="Photo 3">
-            <img src="static/images/photo (5).jpg" alt="Photo 4">
+            <img src="static/images/photo (5).jpg" alt="Photo 4">  
         </div>
 
            <!-- 影片按鈕 -->
@@ -240,34 +220,31 @@
         <a href="Videos.html" class="Video-button">查看影片</a>            
     </div>
 
-        
-    
-    <!-- JavaScript for Carousel -->  
+ <!-- JavaScript for Carousel -->
     <script>
         const carousel = document.querySelector('.carousel');
         let scrollAmount = 0;
-        
+
         function startCarousel() {
-            const slideWidth = carousel.offsetWidth; // 單張圖片寬度      
-            const totalScrollWidth = carousel.scrollWidth; // 總寬度  
-            const visibleWidth = carousel.clientWidth; // 可見區域寬度  
+            const slideWidth = carousel.clientWidth;
+            const totalScrollWidth = carousel.scrollWidth;
 
-        setInterval(() => {
-            scrollAmount += slideWidth; // 每次滾動一張圖片的寬度
-            if (scrollAmount >= totalScrollWidth - visibleWidth) {  
-                scrollAmount = 0; // 如果滾到底部，從頭開始
-            }    
-            carousel.scrollTo({
-                left: scrollAmount,
-                behavior: 'smooth',
-            });
-        }, 3000); // 每 3 秒滾動一次
-}
+            setInterval(() => {
+                scrollAmount += slideWidth;
+                if (scrollAmount >= totalScrollWidth) {
+                    scrollAmount = 0; // 從頭開始
+                }
+                carousel.scrollTo({
+                    left: scrollAmount,
+                    behavior: 'smooth',
+                });
+            }, 3000); // 每3秒滾動一次
+        }
 
-window.addEventListener('load', startCarousel);
-        </script>  
+        window.addEventListener('load', startCarousel);
+    </script>
 
-        <!-- JavaScript 实现访问计数 -->
+        <!-- JavaScript 实现访问计数 -->  
         <script>  
             const countKey = "visitorCount";  
             const visitorCountElement = document.getElementById("visitor-count");    
