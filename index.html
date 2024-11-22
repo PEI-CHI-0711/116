@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!DOCTYPE html>  
+<html lang="zh">  
 <head>
     <meta charset="UTF-8">
     <title>Home - 固態照明實驗室 (116)</title>
@@ -49,9 +49,9 @@
     margin: 20px auto; /* 确保垂直和水平居中 */
     padding: 20px;
     padding-left: 30px; /* 左侧增加额外空隙 */
-    border: 1px solid #ddd;
+    border: 1px solid #ddd;  
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9;  
     text-align: left;
     max-width: 800px; /* 限制最大宽度 */
     display: block; /* 确保是块级元素 */
@@ -113,7 +113,7 @@
         }
 
         .video-button:hover {
-            background-color: #2980b9;
+            background-color: #2980b9;  
             transform: scale(1.1);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
         }
@@ -138,28 +138,24 @@
             margin-left: 10px;
         }      
 
-        /* 跑马灯区域样式 */
+        /* 跑馬燈區域樣式 */
         .carousel {
             display: flex;
-            overflow-x: auto; /* 允許水平滾動 */
-            overflow: hidden; /* 隐藏滚动条 */  
-            scroll-snap-type: x mandatory; /* 滚动对齐 */
+            overflow-x: hidden; /* 隱藏滾動條 */
+            scroll-behavior: smooth; /* 平滑滾動 */
             margin: 20px auto;
-            width: 80%; /* 宽度 */
-            aspect-ratio: 16 / 9; /* 16:9 比例 */
-            border: 2px solid #ddd;
+            width: 80%; /* 寬度 */
+            aspect-ratio: 16 / 9; /* 16:9 的比例 */
+            border: 2px solid #ddd;  
             border-radius: 10px;
-            background-color: #f9f9f9;
-            position: relative;
+            background-color: #f9f9f9;  
         }
 
         .carousel img {
-            flex-shrink: 0; /* 防止图片缩小 */
-            width: 100%; /* 图片宽度 */
-            height: 100%; /* 图片高度 */
-            object-fit: cover; /* 保持比例 */
-            scroll-snap-align: center; /* 滚动对齐中心 */
-            transition: transform 0.5s ease; /* 平滑过渡效果 */
+            width: 100%; /* 圖片寬度占滿容器 */
+            height: 100%; /* 高度填充跑馬燈 */
+            object-fit: cover; /* 保持比例，裁剪多餘部分 */
+            flex-shrink: 0; /* 防止圖片縮小 */
         }
 
         .carousel::-webkit-scrollbar {
@@ -179,12 +175,35 @@
             <a href="Honor.html">Honor</a>
        </nav>  
 
-    <!-- 添加跑马灯效果 -->
+    <!-- 跑馬燈區域 -->
     <div class="carousel" id="carousel">
-            <img src="static/images/photo (14).jpg" alt="Photo 1">
-            <img src="static/images/photo (15).jpg" alt="Photo 2">  
-            <img src="static/images/photo (16).jpg" alt="Photo 3">
-    </div>  
+        <img src="static/images/photo1.jpg" alt="Photo 1">
+        <img src="static/images/photo2.jpg" alt="Photo 2">
+        <img src="static/images/photo3.jpg" alt="Photo 3">
+        <img src="static/images/photo4.jpg" alt="Photo 4">
+    </div>
+
+    <script>
+        const carousel = document.getElementById("carousel");
+        let scrollAmount = 0;
+
+        function startCarousel() {
+            const slideWidth = carousel.offsetWidth; // 單張圖片的寬度
+            setInterval(() => {
+                scrollAmount += slideWidth; 
+                if (scrollAmount >= carousel.scrollWidth - carousel.offsetWidth) {
+                    scrollAmount = 0; // 回到起點
+                }
+                carousel.scrollTo({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
+            }, 3000); // 每3秒滾動一次
+        }
+
+        // 啟動跑馬燈
+        window.addEventListener("load", startCarousel);
+    </script>
         
         <!-- 實驗室資訊 -->
         <div class="info">
