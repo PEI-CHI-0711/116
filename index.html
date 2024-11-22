@@ -1,89 +1,74 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">  
+    <meta charset="UTF-8">
     <title>Home - 固態照明實驗室 (116)</title>
     <style>
         /* 全局樣式 */
         body {
             margin: 0;
             padding: 0;
-            font-family: Time New Roman, sans-serif; /* 英文字體 */    
+            font-family: "Times New Roman", sans-serif;
         }
 
         body *:lang(zh) {
-            font-family: 標楷體, sans-serif; /* 中文字體 */
+            font-family: 標楷體, sans-serif;
         }
 
-        /* 標題樣式 */
         h1 {
-            background-color: #3498db; /* 藍色背景 */
-            color: white; /* 白色字體 */
-            font-size: 40px; /* 字體大小 */
-            font-weight: ordinary; /* 一般體字 */    
+            background-color: #3498db;
+            color: white;
+            font-size: 40px;
+            font-weight: normal;
             padding: 20px 0;
             margin: 0;
             text-align: center;
         }
 
-        h2 {
-            color: #2c3e50;
-            text-align: center;
-            margin-top: 40px;
-            font-size: 24px;
-        }
-
-
-
-        
-        /* 導航欄樣式 */
-        nav {  
-            background-color: #ecf0f1; /* 淺灰背景 */
+        nav {
+            background-color: #ecf0f1;
             padding: 10px 0;
             text-align: center;
-            margin: 0;  
         }
 
         nav a {
             margin: 0 15px;
-            text-decoration: none; /* 去掉下劃線 */
-            color: #2c3e50; /* 深灰色字體 */
-            font-weight: ordinary; /* 一般字體 */  
-            font-size: 16px; /* 字體大小 */
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: normal;
+            font-size: 16px;
         }
 
         nav a:hover {
-            color: #3498db; /* 滑鼠懸停時變藍 */
-        }   
-    
-    
+            color: #3498db;
+        }
+
         /* 跑馬燈區域樣式 */
         .carousel {
             display: flex;
-            overflow-x: hidden; /* 隱藏滾動條 */
-            scroll-snap-type: x mandatory; /* 滾動對齊 */
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
             margin: 20px auto;
-            width: 55%; /* 寬度 */
-            height: 550px; /* 高度 */
-            border: 2px solid #ddd;  
+            width: 55%;
+            height: 550px;
+            border: 2px solid #ddd;
             border-radius: 10px;
-            background-color: #f9f9f9; /* 跑馬燈背景色 */
-            position: relative;
+            background-color: #f9f9f9;
         }
 
-        
-        .carousel::-webkit-scrollbar {  
-            display: none; /* 隱藏滾動條（適用於 Chrome, Safari） */
+        .carousel::-webkit-scrollbar {
+            display: none;
         }
-        
-        .carousel img {  
-            width: 100%; /* 圖片寬度 */
-            height: 100%; /* 圖片高度 */
-            object-fit: cover; /* 保持比例，裁剪多餘部分 */
-            flex-shrink: 0;  
+
+        .carousel img {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             scroll-snap-align: center;
             transition: transform 0.5s ease;
         }
+
     
     
     
@@ -106,14 +91,14 @@
 
         .info p {
             margin: 10px 0;
-            line-height: 1.6;
+            line-height: 1.6;  
         }
     
         /* 圖片展示區域樣式 */
         .gallery {
             display: flex;
             flex-wrap: wrap; /* 允許多行排列 */
-            justify-content: center;
+            justify-content: center;  
             gap: 10px; /* 圖片間的間距 */
             margin: 20px auto;
             max-width: 80%;
@@ -152,7 +137,7 @@
             border: none;
             border-radius: 5px;
             text-decoration: none;  
-            cursor: pointer;
+            cursor: pointer;  
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -205,7 +190,7 @@
         <!-- 照片跑馬燈 1 - 在線圖片 -->
         <!--
         <div class="carousel" id="carousel1">  
-            <img src="https://via.placeholder.com/800x300?text=Photo+1" alt="Photo 1">    
+            <img src="https://via.placeholder.com/800x300?text=Photo+1" alt="Photo 1">      
     </div>
          -->
     
@@ -255,19 +240,18 @@
 
         
     
-        <!-- JavaScript for Carousel -->
+    <!-- JavaScript for Carousel -->
     <script>
-        const carousel = document.getElementById("carousel2");  
-        let scrollInterval;
+        const carousel = document.getElementById("carousel2");
+        let scrollAmount = 0;
 
         function startCarousel() {
-            let scrollAmount = 0;
             const slideWidth = carousel.offsetWidth;
 
-            scrollInterval = setInterval(() => {
+            setInterval(() => {
                 scrollAmount += slideWidth;
                 if (scrollAmount >= carousel.scrollWidth) {
-                    scrollAmount = 0; // 從頭開始
+                    scrollAmount = 0; // 回到起始位置
                 }
                 carousel.scrollTo({
                     left: scrollAmount,
@@ -276,13 +260,13 @@
             }, 3000); // 每3秒滾動一次
         }
 
-        window.addEventListener("load", startCarousel);        
+        window.addEventListener("load", startCarousel);
         </script>  
 
         <!-- JavaScript 实现访问计数 -->
         <script>  
-            const countKey = "visitorCount";
-            const visitorCountElement = document.getElementById("visitor-count");  
+            const countKey = "visitorCount";  
+            const visitorCountElement = document.getElementById("visitor-count");    
     
             // 获取或初始化访问次数
             let visitorCount = parseInt(localStorage.getItem(countKey)) || 0;
