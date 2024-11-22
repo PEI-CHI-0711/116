@@ -124,7 +124,7 @@
         }
 
 
-                /* 按鈕樣式 */
+        /* 按鈕樣式 */
         .video-button-container {
             text-align: center;
             margin: 30px 0;
@@ -136,7 +136,7 @@
             font-size: 18px;
             font-weight: bold;
             color: white;
-            background-color: #3498db;
+            background-color: #3498db;  
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -148,10 +148,34 @@
         .video-button:hover {
             background-color: #2980b9;
             transform: scale(1.1);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
         }
 
 
+        <!-- 訪問人數顯示區域 -->
+        <div class="footer">  
+            網站總訪問人數：<span id="visitor-count">0</span>
+        </div>
+    
+        <script>
+            // 使用 localStorage 來記錄訪問人數
+            const countKey = "visitorCount"; // 存儲訪問次數的 key  
+            const visitorCountElement = document.getElementById("visitor-count");
+    
+            // 初始化訪問次數
+            let visitorCount = parseInt(localStorage.getItem(countKey)) || 0;
+    
+            // 增加訪問次數
+            visitorCount++;
+            localStorage.setItem(countKey, visitorCount);
+    
+            // 更新頁面上的訪問人數
+            visitorCountElement.textContent = visitorCount;
+        </script>
+
+
+
+        
 
 
         
@@ -164,7 +188,7 @@
         <nav>  
             <a href="index.html">Home</a> |  
             <a href="about.html">About</a> |
-            <a href="Graduate.html">Graduate</a> |  
+            <a href="Graduate.html">Graduate</a> |    
             <a href="Daily_life.html">Daily Life</a> |
             <a href="Honor.html">Honor</a>
            </nav>
@@ -180,7 +204,7 @@
         <!-- 照片跑馬燈 2 - 本地圖片 -->
         
         <div class="carousel" id="carousel2">
-            <img src="static/images/photo (15).JPG" >        
+            <img src="static/images/photo (15).JPG" >          
             <img src="static/images/photo (16).jpg" >          
             <img src="static/images/photo (17).jpg" >    
             <img src="static/images/photo (14).jpg" >    
@@ -230,17 +254,22 @@
     
             function scrollCarousel() {
                 scrollAmount += carousel.offsetWidth;
-                if (scrollAmount >= carousel.scrollWidth) {  
+                if (scrollAmount >= carousel.scrollWidth) {    
                     scrollAmount = 0; // 回到起始位置
                 }
-                carousel.scrollTo({
+                carousel.scrollTo({  
                     left: scrollAmount,
                     behavior: "smooth"
                 });
             }
     
-            setInterval(scrollCarousel, 3000); // 每3秒滾動一次
+            setInterval(scrollCarousel, 3000); // 每3秒滾動一次    
         </script>
 
+        <div class="footer">  
+        <p>© 2024 固態照明實驗室. All Rights Reserved.</p>
+        </div>
+
+        
     </body>
     </html>
