@@ -20,7 +20,7 @@
             background-color: #3498db; /* 藍色背景 */
             color: white; /* 白色字體 */
             font-size: 36px; /* 字體大小 */
-            font-weight: bold; /* 粗體字 */
+            font-weight: ordinary; /* 一般體字 */  
             padding: 20px 0;
             margin: 0;
             text-align: center;
@@ -48,7 +48,7 @@
             margin: 0 15px;
             text-decoration: none; /* 去掉下劃線 */
             color: #2c3e50; /* 深灰色字體 */
-            font-weight: bold; /* 粗體 */
+            font-weight: ordinary; /* 一般字體 */  
             font-size: 16px; /* 字體大小 */
         }
 
@@ -66,21 +66,35 @@
             max-width: 90%;
         }
 
-        /* 信息卡片樣式 */
-        .info-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            width: 240px; /* 卡片寬度 */
-            text-align: center; /* 整體文字置中 */
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex; /* 使用Flexbox讓卡片內內容對齊 */
-            flex-direction: column; /* 垂直排列 */
-            align-items: center; /* 水平置中 */
-            justify-content: space-between; /* 均勻分配上下空間 */
-        }
+        /* 信息卡片容器樣式 */
+.info-container {
+    display: flex; /* 使用 Flexbox */
+    flex-wrap: wrap; /* 容許多行排列 */
+    justify-content: center; /* 卡片居中對齊 */
+    gap: 20px; /* 卡片之間的間距 */
+    margin: 20px auto; /* 頂部和底部的間距 */
+}
+
+/* 信息卡片樣式 */
+.info-card {  
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 240px; /* 卡片寬度 */
+    text-align: center; /* 整體文字置中 */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* 使用 Flexbox 讓卡片內內容對齊 */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平置中 */
+    justify-content: space-between; /* 均勻分配上下空間 */
+}
+
+.info-card:hover {
+    transform: translateY(-5px); /* 卡片浮動效果 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增加陰影 */
+}
         
         .info-card img {
             width: 100%; 
