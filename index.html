@@ -60,16 +60,16 @@
         }
 
         .carousel::-webkit-scrollbar {
-            display: none;
+        display: none;    
         }
 
         .carousel img {
-            flex-shrink: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            scroll-snap-align: center;
-            transition: transform 0.5s ease;
+            width: 100%; /* 圖片寬度占滿容器 */
+            height: 100%; /* 高度填充跑馬燈 */
+            object-fit: cover; /* 保持比例，裁剪多餘部分 */
+            flex-shrink: 0; /* 防止圖片縮小 */
+            scroll-snap-align: center; /* 滾動對齊容器中心 */
+            transition: transform 0.5s ease;  
         }
 
     
