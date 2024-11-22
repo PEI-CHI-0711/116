@@ -45,15 +45,18 @@
 
         /* 跑馬燈區域樣式 */
         .carousel {  
-            display: flex;
+            display: flex;  
+            overflow-x: auto; /* 允許水平滾動 */
+            scroll-snap-type: x mandatory; /* 滾動對齊 */      
             overflow-x: hidden;  
             scroll-snap-type: x mandatory;
             margin: 20px auto;
             width: 55%; /* 寬度 */
-            aspect-ratio: 16 / 9; /* 添加 16:9 的比例 */
+            aspect-ratio: 16 / 9; /* 添加 16:9 的比例 */  
             border: 2px solid #ddd;
             border-radius: 10px;
             background-color: #f9f9f9;  
+            scrollbar-width: none; /* 隱藏滾動條（適用於 Firefox） */
         }
 
         .carousel::-webkit-scrollbar {
