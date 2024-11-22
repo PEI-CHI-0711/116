@@ -16,7 +16,7 @@
         }
 
         h1 {
-            background-color: #3498db; 
+            background-color: #3498db;  
             color: white;
             font-size: 40px;
             font-weight: normal;
@@ -42,33 +42,48 @@
         nav a:hover {
             color: #3498db;
         }
-
-        /* 跑馬燈區域樣式 */
-        .carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            margin: 20px auto;
-            width: 80%; /* 寬度 */
-            aspect-ratio: 16 / 9; /* 16:9 比例 */
-            border: 2px solid #ddd;
+    
+        /* 實驗室資訊區域樣式 */
+        .info {
+            font-family: 標楷體, Times New Roman, serif;              
+            margin: 20px;  
+            padding: 20px;
+            border: 1px solid #ddd;  
             border-radius: 10px;
             background-color: #f9f9f9;
-            scrollbar-width: none; /* 隱藏滾動條（適用於 Firefox） */
+            text-align: left;
+            max-width: 800px;
+            margin: 20px auto;
         }
 
-        .carousel::-webkit-scrollbar {
-            display: none; /* 隱藏滾動條（適用於 Chrome, Safari） */
+        .info h2 {
+            color: #2c3e50;
         }
 
-        .carousel img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* 保持比例，裁剪多餘部分 */
-            flex-shrink: 0;
-            scroll-snap-align: center;
-            transition: transform 0.5s ease;
+        .info p {
+            margin: 10px 0;
+            line-height: 1.6;  
         }
+    
+        /* 圖片展示區域樣式 */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap; /* 允許多行排列 */
+            justify-content: center;  
+            gap: 10px; /* 圖片間的間距 */
+            margin: 20px auto;
+            max-width: 80%;
+        }
+        
+        /* 圖片樣式 */
+        .gallery img {
+            width: 200px; /* 固定寬度 */
+            height: 200px; /* 固定高度 */
+            object-fit: cover; /* 保持圖片比例，裁剪多餘部分 */
+            border: 2px solid #ddd; /* 圖片邊框 */
+            border-radius: 10px; /* 圓角 */    
+        }
+
 
         /* 按鈕樣式 */
         .video-button-container {
@@ -82,11 +97,11 @@
             font-size: 18px;
             font-weight: bold;
             color: white;
-            background-color: #3498db;
+            background-color: #3498db;  
             border: none;
             border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
+            text-decoration: none;  
+            cursor: pointer;  
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -94,8 +109,9 @@
         .video-button:hover {
             background-color: #2980b9;
             transform: scale(1.1);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
         }
+
 
         .footer {
             text-align: center;
@@ -114,80 +130,165 @@
             font-weight: bold;
             color: #3498db;
             margin-left: 10px;
+        }      
+
+        /* 跑马灯区域样式 */
+        .carousel {
+            display: flex;
+            overflow: hidden; /* 隐藏滚动条 */  
+            scroll-snap-type: x mandatory; /* 滚动对齐 */
+            margin: 20px auto;
+            width: 80%; /* 宽度 */
+            aspect-ratio: 16 / 9; /* 16:9 比例 */
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            position: relative;
         }
-    </style>
+
+        .carousel img {
+            flex-shrink: 0; /* 防止图片缩小 */
+            width: 100%; /* 图片宽度 */
+            height: 100%; /* 图片高度 */
+            object-fit: cover; /* 保持比例 */
+            scroll-snap-align: center; /* 滚动对齐中心 */
+            transition: transform 0.5s ease; /* 平滑过渡效果 */
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none; /* 隐藏滚动条（适用 Chrome, Safari） */
+        }
+
+        /* 左右按钮样式 */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;  
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+        }
+
+        .carousel-button.left {
+            left: 10px;
+        }
+
+        .carousel-button.right {
+            right: 10px;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+    </style>  
+
 </head>
-<body>
-    <h1>固態照明實驗室 (116)</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="Graduate.html">Graduate</a> |
-        <a href="Daily_life.html">Daily Life</a> |
-        <a href="Honor.html">Honor</a>
-    </nav>
+    <body>
+        <h1>固態照明實驗室 (116)</h1>
+        <nav>  
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="Graduate.html">Graduate</a> |  
+            <a href="Daily_life.html">Daily Life</a> |
+            <a href="Honor.html">Honor</a>
+       </nav>  
 
-    <!-- 跑馬燈區域 -->
+    <!-- 添加跑马灯效果 -->
     <div class="carousel" id="carousel">
-        <img src="static/images/photo (15).JPG" alt="Photo 1">
-        <img src="static/images/photo (16).jpg" alt="Photo 2">
-        <img src="static/images/photo (17).jpg" alt="Photo 3">
-        <img src="static/images/photo (14).jpg" alt="Photo 4">
+        <img src="https://via.placeholder.com/800x450?text=Image+1" alt="Image 1">  
+        <img src="https://via.placeholder.com/800x450?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/800x450?text=Image+3" alt="Image 3">
+        <img src="https://via.placeholder.com/800x450?text=Image+4" alt="Image 4">
+    </div>  
+    <button class="carousel-button left" id="prevBtn">&#10094;</button>  
+    <button class="carousel-button right" id="nextBtn">&#10095;</button>
+        
+        <!-- 實驗室資訊 -->
+        <div class="info">
+            <h2>實驗室資訊</h2>
+            <p>固態照明實驗室專注於光學材料與照明系統的研究。我們的研究領域包括但不限於：</p>
+            <ul>  
+                <li>LED 照明系統設計</li>
+                <li>光學材料的特性研究</li>
+                <li>光熱效應分析</li>
+            </ul>
+            <p>歡迎有興趣的學生與研究人員加入我們！</p>
+            <p>電話：+886-3-5593142＃1359、3384</p> 地址：304新竹縣新豐鄉新興路1號（明新科大逢喜樓-116室）</p>
+        </div>
+        
+        <!-- 圖片展示 -本地圖片 -->
+        <div class="gallery">    
+            <img src="static/images/photo (6).jpg" alt="Photo 1">  
+            <img src="static/images/photo (8).jpg" alt="Photo 2">  
+            <img src="static/images/photo (4).jpg" alt="Photo 3">
+            <img src="static/images/photo (5).jpg" alt="Photo 4">  
+        </div>
+
+           <!-- 影片按鈕 -->
+    <div class="video-button-container">      
+        <a href="Videos.html" class="Video-button">查看影片</a>            
     </div>
 
-    <!-- 實驗室資訊 -->
-    <div class="info">
-        <h2>實驗室資訊</h2>
-        <p>固態照明實驗室專注於光學材料與照明系統的研究。我們的研究領域包括但不限於：</p>
-        <ul>
-            <li>LED 照明系統設計</li>
-            <li>光學材料的特性研究</li>
-            <li>光熱效應分析</li>
-        </ul>
-        <p>歡迎有興趣的學生與研究人員加入我們！</p>
-        <p>電話：+886-3-5593142＃1359、3384</p>
-        <p>地址：304新竹縣新豐鄉新興路1號（明新科大逢喜樓-116室）</p>
-    </div>
-
-    <!-- 圖片展示 -本地圖片 -->
-    <div class="gallery">
-        <img src="static/images/photo (6).jpg" alt="Photo 1">
-        <img src="static/images/photo (8).jpg" alt="Photo 2">
-        <img src="static/images/photo (4).jpg" alt="Photo 3">
-        <img src="static/images/photo (5).jpg" alt="Photo 4">
-    </div>
-
-    <!-- 影片按鈕 -->
-    <div class="video-button-container">
-        <a href="Videos.html" class="video-button">查看影片</a>
-    </div>
-
-    <!-- JavaScript for Carousel -->
+    <!-- JavaScript -->
     <script>
-        const carousel = document.querySelector('.carousel');
-        let scrollAmount = 0;
+        const carousel = document.getElementById('carousel');
+        const images = carousel.querySelectorAll('img');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
 
-        function startCarousel() {
-            const slideWidth = carousel.offsetWidth;
-
-            setInterval(() => {
-                scrollAmount += slideWidth;
-                if (scrollAmount >= carousel.scrollWidth) {
-                    scrollAmount = 0; // 從頭開始
-                }
-                carousel.scrollTo({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-            }, 3000); // 每3秒滾動一次
+        function updateCarousel() {
+            const offset = -currentIndex * carousel.offsetWidth;
+            carousel.scrollTo({
+                left: offset,
+                behavior: 'smooth'
+            });
         }
 
-        window.addEventListener('load', startCarousel);
-    </script>
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateCarousel();
+        }
 
-    <div class="footer">
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateCarousel();
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // 自动滚动
+        setInterval(nextSlide, 3000);
+    </script>
+        <!-- JavaScript 实现访问计数 -->  
+        <script>  
+            const countKey = "visitorCount";    
+            const visitorCountElement = document.getElementById("visitor-count");    
+    
+            // 获取或初始化访问次数
+            let visitorCount = parseInt(localStorage.getItem(countKey)) || 0;  
+    
+            // 增加访问次数
+            visitorCount++;  
+            localStorage.setItem(countKey, visitorCount);    
+    
+            // 更新页面上的访问次数
+            visitorCountElement.textContent = visitorCount;
+        </script>
+
+        
+        <div class="footer">  
         <p>© 2024 固態照明實驗室. All Rights Reserved.</p>
         <p class="visitor-count">訪問次數：<span id="visitor-count">0</span></p>
-    </div>
+        </div>
+
+        
 </body>
-</html>
+</html>  
