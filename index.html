@@ -13,7 +13,7 @@
         }
 
         h1 {
-            background-color: #3498db;
+            background-color: #3498db;  
             color: white;
             padding: 20px;
             margin: 0;
@@ -152,26 +152,6 @@
         }
 
 
-        <!-- 訪問人數顯示區域 -->
-        <div class="footer">    
-            網站總訪問人數：<span id="visitor-count">0</span>
-        </div>
-    
-        <script>
-            // 使用 localStorage 來記錄訪問人數
-            const countKey = "visitorCount"; // 存儲訪問次數的 key  
-            const visitorCountElement = document.getElementById("visitor-count");  
-    
-            // 初始化訪問次數
-            let visitorCount = parseInt(localStorage.getItem(countKey)) || 0;  
-    
-            // 增加訪問次數
-            visitorCount++;
-            localStorage.setItem(countKey, visitorCount);
-    
-            // 更新頁面上的訪問人數
-            visitorCountElement.textContent = visitorCount;
-        </script>  
 
         .footer {
             text-align: center;
@@ -183,8 +163,14 @@
         .footer p {
             margin: 0;
             color: #7f8c8d;
+            display: inline-block;
         }
 
+        .footer .visitor-count {
+            font-weight: bold;
+            color: #3498db;
+            margin-left: 10px;
+        }
         
 
 
@@ -264,20 +250,40 @@
     
             function scrollCarousel() {
                 scrollAmount += carousel.offsetWidth;
-                if (scrollAmount >= carousel.scrollWidth) {    
+                if (scrollAmount >= carousel.scrollWidth) {      
                     scrollAmount = 0; // 回到起始位置
                 }
                 carousel.scrollTo({  
                     left: scrollAmount,
-                    behavior: "smooth"
+                    behavior: "smooth"  
                 });
             }
     
             setInterval(scrollCarousel, 3000); // 每3秒滾動一次    
         </script>
 
+        <!-- JavaScript 实现访问计数 -->
+        <script>  
+            const countKey = "visitorCount";
+            const visitorCountElement = document.getElementById("visitor-count");  
+    
+            // 获取或初始化访问次数
+            let visitorCount = parseInt(localStorage.getItem(countKey)) || 0;
+    
+            // 增加访问次数
+            visitorCount++;
+            localStorage.setItem(countKey, visitorCount);  
+    
+            // 更新页面上的访问次数
+            visitorCountElement.textContent = visitorCount;
+        </script>
+
+
+
+        
         <div class="footer">  
         <p>© 2024 固態照明實驗室. All Rights Reserved.</p>
+        <p class="visitor-count">訪問次數：<span id="visitor-count">0</span></p>
         </div>
 
         
