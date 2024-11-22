@@ -46,15 +46,15 @@
         /* 實驗室資訊區域樣式 */
         .info {
             font-family: 標楷體, Times New Roman, serif;              
-            margin: 20px;  
+            margin: 20px auto; /* 垂直和水平居中（auto 实现水平居中） */
             padding: 20px;
             padding-left: 30px; /* 左侧增加额外空隙 */
             border: 1px solid #ddd;    
             border-radius: 10px;  
             background-color: #f9f9f9;  
             text-align: left;
-            max-width: 800px;  
-            margin: 20px auto;  
+            max-width: 800px;  /* 限制最大宽度 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
         }
         
         .info h2 {
@@ -65,6 +65,7 @@
             margin: 10px 0;
             line-height: 1.6;  
         }
+
 
     
         /* 圖片展示區域樣式 */
