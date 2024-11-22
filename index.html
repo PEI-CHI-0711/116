@@ -153,17 +153,17 @@
 
 
         <!-- 訪問人數顯示區域 -->
-        <div class="footer">  
+        <div class="footer">    
             網站總訪問人數：<span id="visitor-count">0</span>
         </div>
     
         <script>
             // 使用 localStorage 來記錄訪問人數
             const countKey = "visitorCount"; // 存儲訪問次數的 key  
-            const visitorCountElement = document.getElementById("visitor-count");
+            const visitorCountElement = document.getElementById("visitor-count");  
     
             // 初始化訪問次數
-            let visitorCount = parseInt(localStorage.getItem(countKey)) || 0;
+            let visitorCount = parseInt(localStorage.getItem(countKey)) || 0;  
     
             // 增加訪問次數
             visitorCount++;
@@ -171,9 +171,19 @@
     
             // 更新頁面上的訪問人數
             visitorCountElement.textContent = visitorCount;
-        </script>
+        </script>  
 
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+            margin-top: 30px;
+        }
 
+        .footer p {
+            margin: 0;
+            color: #7f8c8d;
+        }
 
         
 
