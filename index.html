@@ -58,38 +58,38 @@
     
     
         /* 跑馬燈區域樣式 */
-         .carousel {  
+        .carousel {
             display: flex;
-            overflow-x: auto; /* 允許水平滾動 */
-            scroll-snap-type: x mandatory; /* 滾動對齊 */  
-            margin: 20px auto;  /* 邊緣 */
-            width: 55%;  /* 縮小寬度 */
-            height: 550px; /* 調整高度 */
-            object-fit: contain; /* 保持圖片比例，不裁剪 */
-            border: 2px solid #ddd;    
-            border-radius: 10px;  /* 邊界半徑 */  
-            background-color: #f9f9f9; /* 跑馬燈背景色（可選） */
-            scrollbar-width: none; /* 隱藏滾動條（適用於 Firefox） */
+            overflow-x: hidden; /* 隱藏滾動條 */
+            scroll-snap-type: x mandatory; /* 滾動對齊 */
+            margin: 20px auto;
+            width: 55%; /* 寬度 */
+            height: 550px; /* 高度 */
+            border: 2px solid #ddd;  
+            border-radius: 10px;
+            background-color: #f9f9f9; /* 跑馬燈背景色 */
+            position: relative;
         }
+
         
         .carousel::-webkit-scrollbar {  
-        display: none; /* 隱藏滾動條（適用於 Chrome, Safari） */
+            display: none; /* 隱藏滾動條（適用於 Chrome, Safari） */
         }
         
-        .carousel img {
-            width: 100%; /* 圖片寬度占滿容器 */
-            height: 100%; /* 高度填充跑馬燈 */
+        .carousel img {  
+            width: 100%; /* 圖片寬度 */
+            height: 100%; /* 圖片高度 */
             object-fit: cover; /* 保持比例，裁剪多餘部分 */
-            flex-shrink: 0; /* 防止圖片縮小 */
-            scroll-snap-align: center; /* 滾動對齊容器中心 */
-            transition: transform 0.5s ease;  
+            flex-shrink: 0;  
+            scroll-snap-align: center;
+            transition: transform 0.5s ease;
         }
     
     
     
         /* 實驗室資訊區域樣式 */
         .info {
-            font-family: 標楷體, Times New Roman, serif;        
+            font-family: 標楷體, Times New Roman, serif;          
             margin: 20px;
             padding: 20px;
             border: 1px solid #ddd;
@@ -151,7 +151,7 @@
             background-color: #3498db;  
             border: none;
             border-radius: 5px;
-            text-decoration: none;
+            text-decoration: none;  
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -205,8 +205,8 @@
         <!-- 照片跑馬燈 1 - 在線圖片 -->
         <!--
         <div class="carousel" id="carousel1">  
-            <img src="https://via.placeholder.com/800x300?text=Photo+1" alt="Photo 1">  
-        </div>
+            <img src="https://via.placeholder.com/800x300?text=Photo+1" alt="Photo 1">    
+    </div>
          -->
     
         <!-- 照片跑馬燈 2 - 本地圖片 -->
@@ -256,23 +256,28 @@
         
     
         <!-- JavaScript for Carousel -->
-        <script>  
-            const carousel = document.getElementById("carousel2");
-            let scrollAmount = 0;  
-    
-            function scrollCarousel() {
-                scrollAmount += carousel.offsetWidth;
-                if (scrollAmount >= carousel.scrollWidth) {      
-                    scrollAmount = 0; // 回到起始位置
+    <script>
+        const carousel = document.getElementById("carousel");
+        let scrollInterval;
+
+        function startCarousel() {
+            let scrollAmount = 0;
+            const slideWidth = carousel.offsetWidth;
+
+            scrollInterval = setInterval(() => {
+                scrollAmount += slideWidth;
+                if (scrollAmount >= carousel.scrollWidth) {
+                    scrollAmount = 0; // 從頭開始
                 }
-                carousel.scrollTo({  
+                carousel.scrollTo({
                     left: scrollAmount,
-                    behavior: "smooth"  
+                    behavior: "smooth"
                 });
-            }
-    
-            setInterval(scrollCarousel, 3000); // 每3秒滾動一次    
-        </script>
+            }, 3000); // 每3秒滾動一次
+        }
+
+        window.addEventListener("load", startCarousel);        
+        </script>  
 
         <!-- JavaScript 实现访问计数 -->
         <script>  
