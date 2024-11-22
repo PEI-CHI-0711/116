@@ -43,19 +43,22 @@
             color: #3498db;
         }
     
-        /* 實驗室資訊區域樣式 */
-        .info {
-            font-family: 標楷體, Times New Roman, serif;              
-            margin: 20px auto; /* 垂直和水平居中（auto 实现水平居中） */
-            padding: 20px;
-            padding-left: 30px; /* 左侧增加额外空隙 */
-            border: 1px solid #ddd;    
-            border-radius: 10px;  
-            background-color: #f9f9f9;  
-            text-align: left;
-            max-width: 800px;  /* 限制最大宽度 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
-        }
+        /* 实验室资讯区域样式 */
+.info {
+    font-family: 標楷體, Times New Roman, serif;
+    margin: 20px auto; /* 确保垂直和水平居中 */
+    padding: 20px;
+    padding-left: 30px; /* 左侧增加额外空隙 */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+    max-width: 800px; /* 限制最大宽度 */
+    display: block; /* 确保是块级元素 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+    position: relative; /* 可选：确保不受外部定位干扰 */
+}
+
         
         .info h2 {
             color: #2c3e50;
