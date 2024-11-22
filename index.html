@@ -158,33 +158,6 @@
         .carousel::-webkit-scrollbar {
             display: none; /* 隐藏滚动条（适用 Chrome, Safari） */
         }
-
-        /* 左右按钮样式 */
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;  
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 10;
-            font-size: 20px;
-        }
-
-        .carousel-button.left {
-            left: 10px;
-        }
-
-        .carousel-button.right {
-            right: 10px;
-        }
-
-        .carousel-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
         
     </style>  
 
@@ -201,19 +174,16 @@
 
     <!-- 添加跑马灯效果 -->
     <div class="carousel" id="carousel">
-        <img src="https://via.placeholder.com/800x450?text=Image+1" alt="Image 1">  
-        <img src="https://via.placeholder.com/800x450?text=Image+2" alt="Image 2">
-        <img src="https://via.placeholder.com/800x450?text=Image+3" alt="Image 3">
-        <img src="https://via.placeholder.com/800x450?text=Image+4" alt="Image 4">
+            <img src="static/images/photo (14).jpg" alt="Photo 1">
+            <img src="static/images/photo (15).jpg" alt="Photo 2">  
+            <img src="static/images/photo (16).jpg" alt="Photo 3">
     </div>  
-    <button class="carousel-button left" id="prevBtn">&#10094;</button>  
-    <button class="carousel-button right" id="nextBtn">&#10095;</button>
         
         <!-- 實驗室資訊 -->
         <div class="info">
             <h2>實驗室資訊</h2>
             <p>固態照明實驗室專注於光學材料與照明系統的研究。我們的研究領域包括但不限於：</p>
-            <ul>  
+            <ul>    
                 <li>LED 照明系統設計</li>
                 <li>光學材料的特性研究</li>
                 <li>光熱效應分析</li>
@@ -224,10 +194,10 @@
         
         <!-- 圖片展示 -本地圖片 -->
         <div class="gallery">    
-            <img src="static/images/photo (6).jpg" alt="Photo 1">  
-            <img src="static/images/photo (8).jpg" alt="Photo 2">  
+            <img src="static/images/photo (6).jpg" alt="Photo 1">
+            <img src="static/images/photo (8).jpg" alt="Photo 2">
             <img src="static/images/photo (4).jpg" alt="Photo 3">
-            <img src="static/images/photo (5).jpg" alt="Photo 4">  
+            <img src="static/images/photo (5).jpg" alt="Photo 4">
         </div>
 
            <!-- 影片按鈕 -->
