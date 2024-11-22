@@ -83,13 +83,6 @@
             border: 2px solid #ddd; /* 圖片邊框 */
             border-radius: 10px; /* 圓角 */    
         }
-        
-        /* 限制每排最多顯示五張圖片 */
-        .gallery > * {
-            flex: 1 1 calc(20% - 10px); /* 每張圖片占20%的寬度，考慮間隙 */
-            max-width: calc(20% - 10px); /* 最大寬度設為20%減去間距 */
-            box-sizing: border-box; /* 包括邊框與內邊距 */
-        }
 
 
         /* 按鈕樣式 */
@@ -120,7 +113,6 @@
         }
 
 
-
         .footer {
             text-align: center;
             padding: 20px;
@@ -141,9 +133,10 @@
         }      
 
     </style>  
+
 </head>
     <body>
-        <h1>Welcome 固態照明實驗室 (116)</h1>
+        <h1>固態照明實驗室 (116)</h1>
         <nav>  
             <a href="index.html">Home</a> |
             <a href="about.html">About</a> |
@@ -152,7 +145,6 @@
             <a href="Honor.html">Honor</a>
            </nav>
        
-    
         <!-- 實驗室資訊 -->
         <div class="info">
             <h2>實驗室資訊</h2>
@@ -165,7 +157,6 @@
             <p>歡迎有興趣的學生與研究人員加入我們！</p>
             <p>電話：+886-3-5593142＃1359、3384</p> 地址：304新竹縣新豐鄉新興路1號（明新科大逢喜樓-116室）</p>
         </div>
-
         
         <!-- 圖片展示 -本地圖片 -->
         <div class="gallery">    
@@ -176,7 +167,7 @@
         </div>
 
            <!-- 影片按鈕 -->
-    <div class="video-button-container">    
+    <div class="video-button-container">      
         <a href="Videos.html" class="Video-button">查看影片</a>            
     </div>
 
@@ -196,8 +187,6 @@
             // 更新页面上的访问次数
             visitorCountElement.textContent = visitorCount;
         </script>
-
-
 
         
         <div class="footer">  
