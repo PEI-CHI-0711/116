@@ -16,7 +16,7 @@
         }
 
         h1 {
-            background-color: #3498db;
+            background-color: #3498db;  
             color: white;
             font-size: 40px;
             font-weight: normal;
@@ -44,16 +44,16 @@
         }
 
         /* 跑馬燈區域樣式 */
-        .carousel {
+        .carousel {  
             display: flex;
-            overflow-x: hidden;
+            overflow-x: hidden;  
             scroll-snap-type: x mandatory;
             margin: 20px auto;
-            width: 55%;
-            height: 550px;
+            width: 55%; /* 寬度 */
+            aspect-ratio: 16 / 9; /* 添加 16:9 的比例 */
             border: 2px solid #ddd;
             border-radius: 10px;
-            background-color: #f9f9f9;
+            background-color: #f9f9f9;  
         }
 
         .carousel::-webkit-scrollbar {
