@@ -37,11 +37,11 @@
 
         
         /* 導航欄樣式 */
-        nav {
+        nav {  
             background-color: #ecf0f1; /* 淺灰背景 */
             padding: 10px 0;
             text-align: center;
-            margin: 0;
+            margin: 0;  
         }
 
         nav a {
@@ -57,57 +57,57 @@
         }   
     
     
-            /* 跑馬燈區域樣式 */
-             .carousel {
-                display: flex;
-                overflow-x: auto; /* 允許水平滾動 */
-                scroll-snap-type: x mandatory; /* 滾動對齊 */
-                margin: 20px auto;  /* 邊緣 */
-                width: 55%;  /* 縮小寬度 */
-                height: 550px; /* 調整高度 */
-                object-fit: contain; /* 保持圖片比例，不裁剪 */
-                border: 2px solid #ddd;  
-                border-radius: 10px;  /* 邊界半徑 */  
-                background-color: #f9f9f9; /* 跑馬燈背景色（可選） */
-                scrollbar-width: none; /* 隱藏滾動條（適用於 Firefox） */
-            }
-            
-            .carousel::-webkit-scrollbar {
-            display: none; /* 隱藏滾動條（適用於 Chrome, Safari） */
-            }
-            
-            .carousel img {
-                width: 100%; /* 圖片寬度占滿容器 */
-                height: 100%; /* 高度填充跑馬燈 */
-                object-fit: cover; /* 保持比例，裁剪多餘部分 */
-                flex-shrink: 0; /* 防止圖片縮小 */
-                scroll-snap-align: center; /* 滾動對齊容器中心 */
-                transition: transform 0.5s ease;
-            }
+        /* 跑馬燈區域樣式 */
+         .carousel {  
+            display: flex;
+            overflow-x: auto; /* 允許水平滾動 */
+            scroll-snap-type: x mandatory; /* 滾動對齊 */  
+            margin: 20px auto;  /* 邊緣 */
+            width: 55%;  /* 縮小寬度 */
+            height: 550px; /* 調整高度 */
+            object-fit: contain; /* 保持圖片比例，不裁剪 */
+            border: 2px solid #ddd;    
+            border-radius: 10px;  /* 邊界半徑 */  
+            background-color: #f9f9f9; /* 跑馬燈背景色（可選） */
+            scrollbar-width: none; /* 隱藏滾動條（適用於 Firefox） */
+        }
+        
+        .carousel::-webkit-scrollbar {  
+        display: none; /* 隱藏滾動條（適用於 Chrome, Safari） */
+        }
+        
+        .carousel img {
+            width: 100%; /* 圖片寬度占滿容器 */
+            height: 100%; /* 高度填充跑馬燈 */
+            object-fit: cover; /* 保持比例，裁剪多餘部分 */
+            flex-shrink: 0; /* 防止圖片縮小 */
+            scroll-snap-align: center; /* 滾動對齊容器中心 */
+            transition: transform 0.5s ease;  
+        }
     
     
     
-            /* 實驗室資訊區域樣式 */
-            .info {
-                font-family: 標楷體, Times New Roman, serif;        
-                margin: 20px;
-                padding: 20px;
-                border: 1px solid #ddd;
-                border-radius: 10px;
-                background-color: #f9f9f9;
-                text-align: left;
-                max-width: 800px;
-                margin: 20px auto;
-            }
-    
-            .info h2 {
-                color: #2c3e50;
-            }
-    
-            .info p {
-                margin: 10px 0;
-                line-height: 1.6;
-            }
+        /* 實驗室資訊區域樣式 */
+        .info {
+            font-family: 標楷體, Times New Roman, serif;        
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            text-align: left;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .info h2 {
+            color: #2c3e50;
+        }
+
+        .info p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
     
         /* 圖片展示區域樣式 */
         .gallery {
