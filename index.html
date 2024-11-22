@@ -48,22 +48,24 @@
             font-family: 標楷體, Times New Roman, serif;              
             margin: 20px;  
             padding: 20px;
-            border: 1px solid #ddd;  
-            border-radius: 10px;
-            background-color: #f9f9f9;
+            padding-left: 30px; /* 左侧增加额外空隙 */
+            border: 1px solid #ddd;    
+            border-radius: 10px;  
+            background-color: #f9f9f9;  
             text-align: left;
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 800px;  
+            margin: 20px auto;  
         }
-
+        
         .info h2 {
             color: #2c3e50;
         }
-
+        
         .info p {
             margin: 10px 0;
             line-height: 1.6;  
         }
+
     
         /* 圖片展示區域樣式 */
         .gallery {
@@ -135,6 +137,7 @@
         /* 跑马灯区域样式 */
         .carousel {
             display: flex;
+            overflow-x: auto; /* 允許水平滾動 */
             overflow: hidden; /* 隐藏滚动条 */  
             scroll-snap-type: x mandatory; /* 滚动对齐 */
             margin: 20px auto;
