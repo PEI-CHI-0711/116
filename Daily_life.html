@@ -57,11 +57,11 @@
         /* 容器樣式 */
         .activities-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-wrap: wrap; /* 允許多行排列 */
+            justify-content: center; /* 水平置中 */
             gap: 30px; /* 增大卡片間距 */
             margin: 20px auto;
-            max-width: 90%;
+            max-width: 90%; /* 限制容器寬度 */
         }
 
         /* 卡片樣式 */
@@ -69,7 +69,7 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             background-color: white;
-            width: 400px; /* 放大卡片寬度 */
+            width: 360px; /* 控制卡片寬度 */
             text-align: center;
             padding: 20px; /* 增加內邊距 */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -119,7 +119,6 @@
     </nav>  
 
     <section>
-       <!-- <h2>活動記錄</h2> -->
         <div class="activities-container">
             <!-- 活動 1 -->
             <div class="activity-card">
@@ -152,7 +151,7 @@
             </div>
             <!-- 活動 6 -->
             <div class="activity-card">
-                <img src="static/images/20190102.jpg">  
+                <img src="static/images/20190102.jpg">    
                 <h3>2019 活動</h3>
             </div>
             <!-- 活動 7 -->
