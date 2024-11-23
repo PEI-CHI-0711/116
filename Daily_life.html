@@ -8,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: "Times New Roman", sans-serif; /* 英文字體 */    
+            font-family: "Times New Roman", sans-serif; /* 英文字體 */
         }
 
         body *:lang(zh) {
@@ -18,50 +18,41 @@
         /* 標題樣式 */
         h1 {
             background-color: #3498db; /* 藍色背景 */
-            color: black; /* 白色字體 */
-            font-size: 36px; /* 字體大小 */
-            font-weight: normal; /* 一般體字 */      
+            color: black;
+            font-size: 36px;
+            font-weight: normal;
             padding: 20px 0;
             margin: 0;
             text-align: center;
         }
 
-        h2 {
-            color: #2c3e50;
-            text-align: center;
-            margin-top: 40px;
-            font-size: 24px;
-        }
-
-        
         /* 導航欄樣式 */
         nav {
             background-color: #ecf0f1; /* 淺灰背景 */
             padding: 10px 0;
             text-align: center;
-            margin: 0;
         }
 
         nav a {
             margin: 0 15px;
             text-decoration: none; /* 去掉下劃線 */
             color: #2c3e50; /* 深灰色字體 */
-            font-weight: normal; /* 一般字體 */  
-            font-size: 16px; /* 字體大小 */
+            font-weight: normal;
+            font-size: 16px;
         }
 
         nav a:hover {
-            color: #3498db; /* 滑鼠懸停時變藍 */
-        }   
+            color: #3498db;
+        }
 
         /* 容器樣式 */
         .activities-container {
-            display: flex; /* 使用 Flexbox 水平排列 */
-            flex-wrap: wrap; /* 多行排列 */
-            justify-content: center; /* 水平置中 */
+            display: flex; /* 使用Flexbox實現水平排列 */
+            flex-wrap: wrap; /* 如果寬度不足自動換行 */
+            justify-content: center; /* 卡片水平置中 */
             gap: 20px; /* 卡片間距 */
             margin: 20px auto;
-            max-width: 90%; /* 限制容器寬度 */
+            max-width: 1200px; /* 最大寬度 */
         }
 
         /* 卡片樣式 */
@@ -69,9 +60,9 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             background-color: white;
-            width: 300px; /* 卡片寬度 */
+            width: 300px; /* 卡片固定寬度 */
             text-align: center;
-            padding: 15px; /* 增加內邊距 */
+            padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -83,7 +74,7 @@
 
         .activity-card img {
             width: 100%;
-            aspect-ratio: 16 / 9; /* 設置 16:9 比例 */
+            aspect-ratio: 16 / 9; /* 設置16:9比例 */
             object-fit: cover;
             border-radius: 5px;
             margin-bottom: 10px;
@@ -110,64 +101,64 @@
 </head>
 <body>
     <h1>日常生活</h1>
-    <nav>  
-        <a href="index.html">Home</a> |  
+    <nav>
+        <a href="index.html">Home</a> |
         <a href="about.html">About</a> |
-        <a href="Graduate.html">Graduate</a> |  
+        <a href="Graduate.html">Graduate</a> |
         <a href="Daily_life.html">Daily Life</a> |
         <a href="Honor.html">Honor</a>
-    </nav>  
+    </nav>
 
     <section>
         <div class="activities-container">
             <!-- 活動 1 -->
             <div class="activity-card">
-                <img src="static/images/photo (16).jpg">    
-                <h3>2023 烤肉</h3>  
+                <img src="static/images/photo (16).jpg" alt="活動 1">
+                <h3>2023 烤肉</h3>
                 <p>地點: 阿茂家</p>
             </div>
             <!-- 活動 2 -->
             <div class="activity-card">
-                <img src="static/images/千葉聚餐_241120_1.jpg">  
+                <img src="static/images/千葉聚餐_241120_1.jpg" alt="活動 2">
                 <h3>2024 聚餐</h3>
                 <p>地點: 千葉</p>
             </div>
             <!-- 活動 3 -->
             <div class="activity-card">
-                <img src="static/images/慶生20231205.jpg">  
+                <img src="static/images/慶生20231205.jpg" alt="活動 3">
                 <h3>2023 慶生</h3>
                 <p>地點: 實驗室內部活動</p>
             </div>
             <!-- 活動 4 -->
             <div class="activity-card">
-                <img src="static/images/教師節20240928.jpg">  
+                <img src="static/images/教師節20240928.jpg" alt="活動 4">
                 <h3>2024 教師節聚會</h3>
                 <p>地點: 麻佬二</p>
             </div>
             <!-- 活動 5 -->
             <div class="activity-card">
-                <img src="static/images/20201218.jpg">  
+                <img src="static/images/20201218.jpg" alt="活動 5">
                 <h3>2024 活動</h3>
             </div>
             <!-- 活動 6 -->
             <div class="activity-card">
-                <img src="static/images/20190102.jpg">    
+                <img src="static/images/20190102.jpg" alt="活動 6">
                 <h3>2019 活動</h3>
             </div>
             <!-- 活動 7 -->
             <div class="activity-card">
-                <img src="static/images/20161220.jpg">  
+                <img src="static/images/20161220.jpg" alt="活動 7">
                 <h3>2016 活動</h3>
             </div>
             <!-- 活動 8 -->
             <div class="activity-card">
-                <img src="static/images/20150127.jpg">    
+                <img src="static/images/20150127.jpg" alt="活動 8">
                 <h3>2015 活動</h3>
             </div>
         </div>
     </section>
-    <!-- 頁腳 -->  
-    <div class="footer">  
+    <!-- 頁腳 -->
+    <div class="footer">
         <p>© 2024 固態照明實驗室. All Rights Reserved.</p>
     </div>
 </body>
