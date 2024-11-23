@@ -56,10 +56,10 @@
 
         /* 容器樣式 */
         .activities-container {
-            display: flex;
-            flex-wrap: wrap; /* 允許多行排列 */
+            display: flex; /* 使用 Flexbox 水平排列 */
+            flex-wrap: wrap; /* 多行排列 */
             justify-content: center; /* 水平置中 */
-            gap: 30px; /* 增大卡片間距 */
+            gap: 20px; /* 卡片間距 */
             margin: 20px auto;
             max-width: 90%; /* 限制容器寬度 */
         }
@@ -69,9 +69,9 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             background-color: white;
-            width: 360px; /* 控制卡片寬度 */
+            width: 300px; /* 卡片寬度 */
             text-align: center;
-            padding: 20px; /* 增加內邊距 */
+            padding: 15px; /* 增加內邊距 */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -166,7 +166,7 @@
             </div>
         </div>
     </section>
-    <!-- 頁角 -->  
+    <!-- 頁腳 -->  
     <div class="footer">  
         <p>© 2024 固態照明實驗室. All Rights Reserved.</p>
     </div>
