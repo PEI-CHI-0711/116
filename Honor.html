@@ -2,42 +2,43 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>榮譽 - 固態照明實驗室 (116)</title>
+    <title>日常生活 - 固態照明實驗室 (116)</title>
     <style>
         /* 基本樣式 */
         body {
-            font-family: 標楷體, Times New Roman, serif;  
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;  
-            color: #2c3e50;
+            font-family: "Times New Roman", sans-serif; /* 英文字體 */
         }
 
+        body *:lang(zh) {
+            font-family: 標楷體, sans-serif; /* 中文字體 */
+        }
+
+        /* 標題樣式 */
         h1 {
-            background-color: #3498db;
-            color: white;
-            padding: 20px;
+            background-color: #3498db; /* 藍色背景 */
+            color: black;
+            font-size: 36px;
+            font-weight: normal;
+            padding: 20px 0;
             margin: 0;
             text-align: center;
         }
 
-        h2 {
-            text-align: center;
-            margin: 40px 0 20px;
-            color: #2c3e50;
-        }
-
+        /* 導航欄樣式 */
         nav {
-            background-color: #ecf0f1;
+            background-color: #ecf0f1; /* 淺灰背景 */
             padding: 10px 0;
             text-align: center;
         }
 
         nav a {
             margin: 0 15px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: bold;
+            text-decoration: none; /* 去掉下劃線 */
+            color: #2c3e50; /* 深灰色字體 */
+            font-weight: normal;
+            font-size: 16px;
         }
 
         nav a:hover {
