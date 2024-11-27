@@ -2,10 +2,9 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Gallery - 固態照明實驗室 (116)</title>
+    <title>固態照明實驗室</title>
     <style>
-        /* 基本樣式 */
+        /* 全局樣式 */
         body {
             margin: 0;
             padding: 0;
@@ -16,22 +15,24 @@
             font-family: 標楷體, sans-serif;
         }
 
-        /* 標題樣式 */
+        /* 頁面標題樣式 */
         h1 {
-            background-color: #3498db;
-            color: black;
-            font-size: 36px;
-            font-weight: normal;
-            padding: 20px 0;
-            margin: 0;
-            text-align: center;
+            background-color: #3498db; /* 統一藍色背景 */
+            color: black; /* 標題字體顏色 */
+            font-size: 36px; /* 統一字體大小 */
+            font-weight: normal; /* 字體粗細 */
+            text-align: center; /* 文字居中 */
+            margin: 0; /* 統一外邊距 */
+            padding: 20px 0; /* 統一上下內邊距 */
+            height: 80px; /* 確保高度一致 */
+            line-height: 80px; /* 讓文字垂直居中 */
         }
-
-        /* 導航欄樣式 */
+                /* 導航欄樣式 */
         nav {
             background-color: #ecf0f1;
             padding: 10px 0;
             text-align: center;
+            margin: 0;
         }
 
         nav a {
@@ -44,6 +45,12 @@
 
         nav a:hover {
             color: #3498db;
+        }
+
+        nav a:not(:last-child)::after {
+            content: "|"; /* 添加分隔符 */
+            color: #2c3e50;
+            margin-left: 15px;
         }
 
         .video-container {
@@ -99,10 +106,10 @@
 <body>
     <h1>固態照明實驗室 - 影片集錦</h1>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="Graduate.html">Graduate</a> |
-        <a href="Daily_life.html">Daily Life</a> |  
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="Graduate.html">Graduate</a>
+        <a href="Daily_life.html">Daily Life</a>
         <a href="Honor.html">Honor</a>
     </nav>
 
