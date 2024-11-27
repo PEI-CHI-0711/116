@@ -33,6 +33,7 @@
             font-size: 24px;
         }
 
+        
         /* 導航欄樣式 */
         nav {
             background-color: #ecf0f1; /* 淺灰背景 */
@@ -63,64 +64,64 @@
             max-width: 90%;
         }
 
-        /* 信息卡片樣式 */
-        .info-card {  
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            width: 240px; /* 卡片寬度 */
-            text-align: center; /* 整體文字置中 */
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-            transition: transform 0.3s ease, box-shadow 0.3s ease;  
-            display: flex; /* 使用 Flexbox 讓卡片內內容對齊 */
-            flex-direction: column; /* 垂直排列 */
-            align-items: center; /* 水平置中 */
-            justify-content: space-between; /* 均勻分配上下空間 */
-        }
+        /* 信息卡片容器樣式 */
+.info-container {  
+    display: flex; /* 使用 Flexbox */
+    flex-wrap: wrap; /* 容許多行排列 */
+    justify-content: center; /* 卡片居中對齊 */
+    gap: 20px; /* 卡片之間的間距 */
+    margin: 20px auto; /* 頂部和底部的間距 */
+}
 
-        .info-card:hover {
-            transform: translateY(-5px); /* 卡片浮動效果 */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增加陰影 */
-        }
+/* 信息卡片樣式 */
+.info-card {  
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 240px; /* 卡片寬度 */
+    text-align: center; /* 整體文字置中 */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* 使用 Flexbox 讓卡片內內容對齊 */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平置中 */
+    justify-content: space-between; /* 均勻分配上下空間 */
+}
 
-        /* 7:5 比例樣式 */
-        .info-card img.seven-five {
+.info-card:hover {
+    transform: translateY(-5px); /* 卡片浮動效果 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增加陰影 */
+}
+        
+        .info-card img {
             width: 100%; 
-            aspect-ratio: 7 / 5; /* 設置 7:5 比例 */
+            height: 220px;  
             object-fit: cover;
             border-radius: 5px;
         }
-
-        /* 1:1 比例樣式 */
-        .info-card img.one-one {
-            width: 100%; 
-            aspect-ratio: 1 / 1; /* 設置 1:1 比例 */
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
+        
         .info-card h3 {
             margin: 15px 0 5px;
             color: #3498db;
             font-weight: bold; /* 加粗字體 */
             text-align: center;
         }
-
+        
         .info-card p {
             margin: 5px 0;
             color: #7f8c8d;  
             text-align: center; /* 每一行文字左對齊 */
             width: 100%; /* 確保文字區塊在卡片內對齊 */
         }
-
+        
         .info-card a {
             text-decoration: none;
             color: purple;
             font-weight: ordinary;
             margin-top: 10px;
         }
-
+        
         .info-card a:hover {
             color: #2980b9; /* 滑鼠懸停顏色 */
         }
@@ -137,6 +138,7 @@
             color: #7f8c8d;
             display: inline-block;
         }
+        
     </style>
 </head>
 <body>
@@ -154,13 +156,13 @@
     <h2>教授資訊</h2>
     <div class="info-container">
         <div class="info-card">
-            <img class="seven-five" src="static/images/professor_SB.JPG" alt="Professor SB">          
+            <img src="static/images/professor_SB.JPG" alt="Professor SB">          
             <h3>殷尚彬教授</h3>  
             <p>Email: sbying@must.edu.tw</p> <p>Phone: +886-3-5593142 # 3384</p>  
             <a href="https://acade.must.edu.tw/member/page.aspx?UnitID=40&id=5592" target="_blank">查看教師資料</a>    
         </div>  
         <div class="info-card">
-            <img class="one-one" src="static/images/professor_BM.jpg" alt="Professor BM">        
+            <img src="static/images/professor_BM.jpg" alt="Professor BM">        
             <h3>陳炳茂教授</h3>
             <p>Email: bmchen@must.edu.tw</p>
             <p>Phone: +886-3-5593142 # 3382</p>
@@ -170,20 +172,21 @@
 </section>
 
 <!-- 學生資訊 -->
-<section>
-    <h2>現任學生資訊</h2>
-    <div class="info-container">
-        <div class="info-card">
-            <img class="seven-five" src="static/images/Huang_2.jpg" alt="學生 1">      
-            <h3>鄧阮晨煌</h3>
-            <p>碩士二年級 ENFJ ♓</p>
-        </div>
-        <div class="info-card">
-            <img class="one-one" src="static/images/Jie.jpg" alt="學生 2">        
-            <h3>潘文杰</h3>      
-            <p>碩士二年級 ♏</p>
-        </div>
-        <div class="info-card">  
+    <section>
+        <h2>現任學生資訊</h2>
+        <div class="info-container">
+            
+            <div class="info-card">  
+                <img src="static/images/Huang_2.jpg">      
+                <h3>鄧阮晨煌</h3>
+                <p>碩士二年級 ENFJ ♓</p>
+            </div>
+            <div class="info-card">  
+                <img src="static/images/Jie.jpg">        
+                <h3>潘文杰</h3>      
+                <p>碩士二年級 ♏</p>
+            </div>
+            <div class="info-card">  
                 <img src="static/images/An.jpg">        
                 <h3>阮氏翠安</h3>  
                 <p>碩士二年級 ♋</p>
@@ -233,14 +236,15 @@
                 <h3>等待你的加入</h3>
                 <p>-</p>
             </div>
+
+        </div>
+    </section>
+
+    <!-- 頁角 -->  
+    <div class="footer">  
+        <p>© 2024 固態照明實驗室. All Rights Reserved.</p>
     </div>
+
     
-</section>
-
-<!-- 頁角 -->  
-<div class="footer">  
-    <p>© 2024 固態照明實驗室. All Rights Reserved.</p>
-</div>
-
 </body>
 </html>
